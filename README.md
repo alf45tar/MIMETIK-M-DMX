@@ -1,4 +1,4 @@
-# DMX Smoke Machine Controller (SDJ Mimetik-M)
+# DMX Smoke Machine Controller
 
 DMX smoke machine controller for SDJ/Sagitter/Proel [MIMETIK-M](https://www.sdjlighting.com/en/prodotto/sg-mimetikm-smoke-machine-mimetik-900w/) smoke machine.
 
