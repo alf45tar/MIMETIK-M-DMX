@@ -184,6 +184,11 @@ The Arduino’s digital output pin cannot directly drive the smoke machine’s t
 * Compatible with standard 5 V logic levels.
 * Cheap, widely available, and reliable.
 
+## Photos
+
+![Outside](Photo1.jpg)
+![Inside](Photo2.jpg)
+
 ## ⚠️ Safety Notes
 - Smoke machines run on **mains voltage** — isolate low-voltage electronics.  
 - Double-check wiring before powering on.  
