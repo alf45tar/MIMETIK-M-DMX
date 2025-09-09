@@ -164,7 +164,7 @@ The **PN2222** is a common NPN bipolar junction transistor (BJT) used as a **swi
 
 ### Purpose
 
-The Arduino’s digital output pin cannot directly drive the smoke machine’s timer input because the timer expects **higher current than the Arduino pin can safely supply**. The PN2222 acts as a **current amplifier** to safely trigger the smoke machine.
+The Arduino’s digital output pin cannot directly drive the smoke machine’s timer input (which typically activates a coil inside the machine, like a relay) because the relay expects **higher current than the Arduino pin can safely supply**. The PN2222 acts as a **current amplifier** to safely trigger the smoke machine.
 
 ### How it Works
 
