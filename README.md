@@ -32,15 +32,15 @@ The project includes:
 | MAX485 **or** SN75176 module | 1 | RS485 DMX transceiver |
 
 ## 📌 Timer Port Pinout
-![Pinout](Timer Pinout.jpg)
+![Pinout](Timer%20Pinout.jpg)
     
 
 | Label | Direction | Notes                                      |
 | ----- | --------- | ------------------------------------------ |
 | GND   | Common    | Ground reference                           |
 | +5V   | Output    | Provides +5V to remote controller          |
-| READY | Output    | HIGH when warmed up, LOW during warm-up    |
 | SMOKE | Input     | Active LOW → pulling to GND triggers smoke |
+| READY | Output    | HIGH when warmed up, LOW during warm-up    |
 | NC    | –         | Not connected                              |
 
 
