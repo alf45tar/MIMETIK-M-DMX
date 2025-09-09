@@ -123,6 +123,7 @@ Use one of the standard Arduino Uno power options instead:
 ⚠️ Never connect power simultaneously to multiple inputs (e.g. USB and VIN) unless you know exactly how Arduino’s auto-select circuitry works.  
 
 ## ⚙️ Software Behavior
+- **DMX channel:** `503` (change in code if desired)
 - **READY = LOW** → warm-up → smoke disabled  
 - **DMX mapping**  
   - `0` = smoke OFF  
@@ -139,7 +140,12 @@ Use one of the standard Arduino Uno power options instead:
   - Pin 9: PWM LED shows DMX level  
   - Pin 10: LED mirrors smoke pulse (ON when machine is triggered)  
   - Pin 13: Built-in LED follows READY state  
-
+- **Failsafe**
+  - Smoke is forced OFF if:
+      - Machine is warming up (READY LOW)
+      - DMX signal is lost for >3s
+      - DMX=0
+      
 ## 📊 DMX Pulse Example
 ![Pulse Example](DMX%20Pulse%20Example.png)
 
