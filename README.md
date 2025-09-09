@@ -31,15 +31,9 @@ The project includes:
 | Protoshield v.5 | 1 | For clean soldering and module integration |
 | MAX485 **or** SN75176 module | 1 | RS485 DMX transceiver |
 
-## 📌 Pinout
-
-Female DIN-5 panel mount on smoke machine - Front View
-
-       NC        GND
-        ●        ●
-     +5V  ●     ● READY
-             ●    
-           SMOKE
+## 📌 Timer Port Pinout
+![Pinout](Timer Pinout.jpg)
+    
 
 | Label | Direction | Notes                                      |
 | ----- | --------- | ------------------------------------------ |
