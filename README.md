@@ -20,7 +20,6 @@ The project includes:
 - DMX512 input
 - READY/WARM-UP detection (machine will not fire until ready)  
 - Pulse control (duration and period scale with DMX value)  
-- Tri-state smoke output (ON = OUTPUT LOW, OFF = INPUT)  
 - Feedback PWM output LED for monitoring DMX channel receipt  
 - Compact 3D-printed enclosure mounts directly to the machine  
 
@@ -34,13 +33,30 @@ The project includes:
 
 ## 📌 Pinout
 
+Female DIN-5 panel mount on smoke machine - Front View
+
+       NC        GND
+        ●        ●
+     +5V  ●     ● READY
+             ●    
+           SMOKE
+
+| Label | Direction | Notes                                      |
+| ----- | --------- | ------------------------------------------ |
+| GND   | Common    | Ground reference                           |
+| +5V   | Output    | Provides +5V to remote controller          |
+| READY | Output    | HIGH when warmed up, LOW during warm-up    |
+| SMOKE | Input     | Active LOW → pulling to GND triggers smoke |
+| NC    | –         | Not connected                              |
+
+
 | Arduino Pin | Function | Notes |
-|-------------|----------|-------|
-| `12` | `readyPin` | Input from machine’s **READY** output |
-| `13` | `ledPin` | Built-in LED mirrors READY state |
-| `8` | `smokePin` | Smoke trigger (tri-state control) |
-| `9` | `feedbackPin` | PWM output showing DMX level |
-| `2` | DMX direction pin | Required by LXUSARTDMX |
+|------|----------|-------|
+| `12` | `readyPin`        | Input from machine’s **READY** output |
+| `13` | `ledPin`          | Built-in LED mirrors READY state |
+| `8`  | `smokePin`        | Smoke trigger                   |
+| `9`  | `feedbackPin`     | PWM output showing DMX level |
+| `2`  | DMX direction pin | Required by LXUSARTDMX |
 
 ## ⚙️ Software Behavior
 
