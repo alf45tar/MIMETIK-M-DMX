@@ -52,6 +52,44 @@ The project includes:
 | `9`  | `feedbackPin`     | PWM output showing DMX level |
 | `2`  | DMX direction pin | Required by LXUSARTDMX |
 
+# Schematic
+
+```
+
+
+
+12  --------------  READY
+
+
+                   SMOKE
+                     |
+                     |
+                     |  C
+         560Ω    B | /
+8   ----/\/\/\-----|/     PN2222
+                   |\
+                   | v  E
+                     |
+                     |
+                     |
+                    GND
+
+                                      
+                     +---------------+
+RX  -----------------| R         VCC |---------- +5V
+                     |               |
+                +----| RE/         B |---------- Data - (XLR pin 2)
+                |    |    SN75176    |
+2   ------------+----| DE          A |---------- Data + (XLR pin 3)
+                     |               |
+TX  -----------------| D         GND |---+------ Ground (XLR pin 1)
+                     +---------------+   |
+                                         |
+                                        GND
+
+```               
+
+
 ## ⚙️ Software Behavior
 
 - **READY low → WARM-UP**: smoke disabled until machine signals ready  
