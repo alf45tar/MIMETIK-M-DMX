@@ -141,7 +141,7 @@ Use one of the standard Arduino Uno power options instead:
   - Pin 13: Built-in LED follows READY state  
 
 ## 📊 DMX Pulse Example
-
+![Pulse Example](DMX%20Pulse%20Example.png)
 
 ## ▶️ Usage
 1. Print the enclosure and assemble the electronics.  
