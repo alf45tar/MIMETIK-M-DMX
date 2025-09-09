@@ -158,6 +158,32 @@ Use one of the standard Arduino Uno power options instead:
 5. Upload the Arduino sketch (tested on Uno R3).  
 6. Send DMX values to the configured channel.  
 
+## 🔧 PN2222 Transistor Notes
+
+The **PN2222** is a common NPN bipolar junction transistor (BJT) used as a **switch** in the DMX smoke machine controller.
+
+### Purpose
+
+The Arduino’s digital output pin cannot directly drive the smoke machine’s timer input because the timer expects **higher current than the Arduino pin can safely supply**. The PN2222 acts as a **current amplifier** to safely trigger the smoke machine.
+
+### How it Works
+
+1. Arduino outputs a small current to the transistor **base** through a resistor (560 Ω in the schematic).
+2. This turns the transistor **ON**, allowing current to flow from **collector to emitter**, which pulls the smoke trigger line LOW.
+3. When the Arduino pin is LOW, the transistor switches OFF, and the smoke line returns to HIGH (inactive).
+
+### Base Resistor Note
+
+* The 560 Ω resistor sets the current into the transistor’s base.
+* It can be replaced with a **470 Ω** or **680 Ω** resistor depending on available components.
+
+### Benefits
+
+* Protects the Arduino from excessive current draw.
+* Provides fast switching for precise smoke pulses.
+* Compatible with standard 5 V logic levels.
+* Cheap, widely available, and reliable.
+
 ## ⚠️ Safety Notes
 - Smoke machines run on **mains voltage** — isolate low-voltage electronics.  
 - Double-check wiring before powering on.  
